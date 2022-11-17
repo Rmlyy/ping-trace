@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  app:
+    image: rmly/ping-trace:latest
+    restart: always
+    command: npm run prod
+    environment:
+      - NPM_CONFIG_CACHE=/usr/src/app/.npm-cache
+      - PORT=5989
+    networks:
+      - ping-trace
+
+networks:
+  ping-trace:
+    name: ping-trace
+    driver: bridge

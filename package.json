@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
     "ip-address": "^8.1.0",
     "node-cache": "^5.1.2",
     "psl": "^1.9.0"

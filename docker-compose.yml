@@ -7,6 +7,7 @@ services:
     command: npm run prod
     environment:
       - NPM_CONFIG_CACHE=/usr/src/app/.npm-cache
+      - HOST=0.0.0.0
       - PORT=5989
     networks:
       - ping-trace

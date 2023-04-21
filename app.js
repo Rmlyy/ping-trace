@@ -20,5 +20,5 @@ app.get('/traceroute', async (req, res) => {
 })
 
 app.listen(port, host, () => {
-  console.log(`Server listening on port ${host}:${port}`)
+  console.log(`Server listening on ${host}:${port}`)
 })

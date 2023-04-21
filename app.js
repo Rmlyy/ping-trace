@@ -9,12 +9,14 @@ app.set('trust proxy', true)
 app.disable('x-powered-by')
 app.use(limiter)
 
+// TODO: Rework app
+
 app.get('/ping', async (req, res) => {
   await run(req, res, 'ping', ['-O', '-c4', '-i0.5', '-w2', req.query.target])
 })
 
 app.get('/traceroute', async (req, res) => {
-  await run(req, res, 'traceroute', ['-w1', '-q1', '-f2', req.query.target])
+  await run(req, res, 'traceroute', ['-w1', '-q1', '-f2', req.query.target, req.query.protocol])
 })
 
 app.listen(port, host, () => {
